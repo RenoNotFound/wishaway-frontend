@@ -34,8 +34,6 @@ export default function LoginGoogle(props) {
     getLoggedInUser();
   }, [dispatch, props.location.search]);
 
-  console.log(data);
-
   if (loading) return <Fragment>Loading...</Fragment>;
 
   return (
