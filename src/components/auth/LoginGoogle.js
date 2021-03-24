@@ -1,10 +1,14 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../store/actions";
 
 export default function LoginGoogle(props) {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState({});
   const [errors, setErrors] = useState(null);
+
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getLoggedInUser = async () => {
@@ -18,8 +22,8 @@ export default function LoginGoogle(props) {
         .get(`/api/auth/google/callback${props.location.search}`, config)
         .then((response) => {
           console.log(response.data);
+          dispatch(login(response.data.user));
           setLoading(false);
-          setData(response.data);
         })
         .catch((error) => {
           console.error(error);
@@ -28,7 +32,7 @@ export default function LoginGoogle(props) {
         });
     };
     getLoggedInUser();
-  }, [props.location.search]);
+  }, [dispatch, props.location.search]);
 
   console.log(data);
 
@@ -37,13 +41,7 @@ export default function LoginGoogle(props) {
   return (
     <div>
       <details>
-        <summary>
-          {Object.keys(data).length !== 0 ? (
-            <div>Welcome {data.user.name}</div>
-          ) : (
-            ""
-          )}
-        </summary>
+        <summary>Welcome {auth.user.name}</summary>
       </details>
     </div>
   );
