@@ -1,7 +1,8 @@
-export const login = (user) => {
+export const login = (user, token) => {
   return {
     type: "SET_LOGIN",
-    payload: user,
+    payload_user: user,
+    payload_token: token,
   };
 };
 

@@ -5,6 +5,7 @@ const initialStates = {
   auth: {
     loggedIn: false,
     user: {},
+    token: null,
   },
 };
 
