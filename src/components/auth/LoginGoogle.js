@@ -21,8 +21,9 @@ export default function LoginGoogle(props) {
       await axios
         .get(`/api/auth/google/callback${props.location.search}`, config)
         .then((response) => {
-          console.log(response.data);
-          dispatch(login(response.data.user));
+          console.log(response.data.data);
+          const data = response.data.data;
+          dispatch(login(data.user, data.token));
           setLoading(false);
         })
         .catch((error) => {
