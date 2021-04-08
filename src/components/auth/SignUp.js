@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { login } from "../../store/actions";
+import api from "../../services/ApiService";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -11,30 +10,20 @@ export default function Register() {
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [errors, setErrors] = useState({});
 
-  const dispatch = useDispatch();
-
   let history = useHistory();
 
-  const handleForm = (e) => {
+  const handleForm = async (e) => {
     e.preventDefault();
 
-    const data = {
+    const user = {
       name: name,
       email: email,
       password: password,
       password_confirm: passwordConfirm,
     };
 
-    axios
-      .post("http://localhost:80/api/auth/register", data)
-      .then((response) => {
-        console.log(response);
-        // dispatch(login(response.data.user));
-        // history.push("/login");
-      })
-      .catch((error) => {
-        setErrors(error);
-      });
+    const response = await api.signUp(user);
+    console.log(response);
   };
 
   const handleInput = (e) => {
