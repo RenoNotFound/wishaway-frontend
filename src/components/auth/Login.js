@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+import api from "../../services/ApiService";
 
 export default function Login() {
   const [googleLoginUrl, setGoogleLoginUrl] = useState(null);
@@ -14,61 +15,26 @@ export default function Login() {
   }, []);
 
   const getGoogleLoginUrl = async () => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    await axios
-      .get("/api/auth/google/url", config)
-      .then((response) => {
-        console.log(response);
-        setGoogleLoginUrl(response.data.url);
-      })
-      .catch((error) => {
-        console.error(error);
-        setErrors(error);
-      });
+    const platform = "google";
+    const response = await api.getSocialLoginUrl(platform);
+    setGoogleLoginUrl(response.data.url);
   };
 
   const getFacebookLoginUrl = async () => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    await axios
-      .get("/api/auth/facebook/url", config)
-      .then((response) => {
-        console.log(response);
-        setFacebookLoginUrl(response.data.url);
-      })
-      .catch((error) => {
-        console.error(error);
-        setErrors(error);
-      });
+    const platform = "facebook";
+    const response = await api.getSocialLoginUrl(platform);
+    setFacebookLoginUrl(response.data.url);
   };
 
-  const handleForm = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const data = {
+    const user = {
       email: email,
       password: password,
     };
-
-    axios
-      .post("http://localhost:80/api/auth/login", data)
-      .then((response) => {
-        console.log(response);
-        // dispatch(login(response.data.user));
-        // history.push("/login");
-      })
-      .catch((error) => {
-        setErrors(error);
-      });
+    const response = await api.login(user);
+    console.log(response);
   };
 
   const handleInput = (e) => {
@@ -80,7 +46,7 @@ export default function Login() {
 
   return (
     <Fragment>
-      <form className="" onSubmit={handleForm}>
+      <form className="" onSubmit={handleLogin}>
         <div className="">
           <h1 className="">Login</h1>
           <div className="">
