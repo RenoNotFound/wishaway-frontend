@@ -12,14 +12,8 @@ export default function LoginFacebook(props) {
 
   useEffect(() => {
     const getLoggedInUser = async () => {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-
       await axios
-        .get(`/api/auth/facebook/callback${props.location.search}`, config)
+        .get(`/api/auth/facebook/callback${props.location.search}`)
         .then((response) => {
           console.log(response.data.data);
           const data = response.data.data;

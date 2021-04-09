@@ -12,14 +12,8 @@ export default function LoginGoogle(props) {
 
   useEffect(() => {
     const getLoggedInUser = async () => {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-
       await axios
-        .get(`/api/auth/google/callback${props.location.search}`, config)
+        .get(`/api/auth/google/callback${props.location.search}`)
         .then((response) => {
           console.log(response.data.data);
           const data = response.data.data;
