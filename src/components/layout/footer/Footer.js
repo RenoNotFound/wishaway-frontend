@@ -1,5 +1,6 @@
 import React from "react";
+import "./footer.scss";
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return <footer>© 2021 WishAway Inc.</footer>;
 }
