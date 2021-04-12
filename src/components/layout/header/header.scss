@@ -4,11 +4,21 @@ $iconSize: 40px;
 $labelSize: 17px;
 $baseColor: white;
 
+// CeraStencilPro basic
 @font-face {
   font-family: "CeraStencilPro";
   src: url("../../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO.otf")
       format("opentype"),
     url("../../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO.woff")
+      format("woff");
+}
+
+// CeraStencilPro bold
+@font-face {
+  font-family: "CeraStencilProBold";
+  src: url("../../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO\ Bold.otf")
+      format("opentype"),
+    url("../../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO\ Bold.woff")
       format("woff");
 }
 
@@ -22,6 +32,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .logo {
+      margin-left: 80px;
+    }
 
     .header-icon-container {
       display: flex;
@@ -47,10 +61,41 @@ header {
 }
 
 nav {
-  font-family: "CeraStencilPro", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
+  font-family: "CeraStencilProBold", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  // font-weight: ;
   text-transform: uppercase;
 
   margin-top: 1%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      transition: color 0.6s ease;
+
+      a {
+        text-decoration: none;
+        color: $baseColor;
+        padding: 0 10px;
+        -webkit-transition: color 0.2s ease;
+        -moz-transition: color 0.2s ease;
+        -o-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #f5ea77;
+        }
+      }
+
+      &:not(:last-of-type) {
+        &:after {
+          content: " / ";
+        }
+      }
+    }
+  }
 }
