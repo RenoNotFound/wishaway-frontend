@@ -17,7 +17,7 @@ export default function Header() {
           <p>search</p>
         </div>
 
-        <div>
+        <div className="logo">
           <Link to="/">
             <img src={WishAwayLogo} alt="logo" width="100%" height="100%" />
           </Link>
@@ -33,7 +33,22 @@ export default function Header() {
           </div>
         </div>
       </section>
-      <nav></nav>
+      <nav>
+        <ul>
+          <li>
+            <Link to="products/health">health</Link>
+          </li>
+          <li>
+            <Link to="products/electronics">electronics</Link>
+          </li>
+          <li>
+            <Link to="products/books">books</Link>
+          </li>
+          <li>
+            <Link to="products/fashion">fashion</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
