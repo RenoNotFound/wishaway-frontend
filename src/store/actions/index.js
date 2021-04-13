@@ -11,3 +11,10 @@ export const logout = () => {
     type: "SET_LOGOUT",
   };
 };
+
+export const setCategories = (categories) => {
+  return {
+    type: "SET_CATEGORIES",
+    payload: categories,
+  };
+};

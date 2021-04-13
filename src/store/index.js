@@ -7,6 +7,9 @@ const initialStates = {
     user: {},
     token: null,
   },
+  categories: {
+    categories: [],
+  },
 };
 
 let store = createStore(
