@@ -9,6 +9,23 @@ const api = {
       .catch((error) => console.log(error)),
   login: (user) =>
     axios.post("/api/auth/login", user).catch((error) => console.log(error)),
+  getCategories: () =>
+    axios
+      .get("api/categories")
+      .then((response) => response.data)
+      .catch((error) => console.log(error)),
+  getSubcategoriesByCategory: (categoryId) =>
+    axios
+      .get(`/api/products/${categoryId}`)
+      .catch((error) => console.log(error)),
+  getProductsByCategory: (categoryId) =>
+    axios
+      .get(`/api/products/${categoryId}`)
+      .catch((error) => console.log(error)),
+  getProductsBySubcategory: (subcategoryId) =>
+    axios
+      .get(`/api/products/${subcategoryId}`)
+      .catch((error) => console.log(error)),
 };
 
 export default api;
