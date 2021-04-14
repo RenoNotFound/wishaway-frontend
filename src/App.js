@@ -18,7 +18,10 @@ function App() {
           <Link to="/sign-up">Sign up</Link> */}
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/products/:categoryId" component={Products} />
+            <Route
+              path="/products/:categoryId/:category"
+              component={Products}
+            />
             <Route exact path="/login" component={Login} />
             <Route exact path="/sign-up" component={SignUp} />
             <Route exact path="/auth/google" component={LoginGoogle} />
