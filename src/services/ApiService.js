@@ -9,9 +9,9 @@ const api = {
       .catch((error) => console.log(error)),
   login: (user) =>
     axios.post("/api/auth/login", user).catch((error) => console.log(error)),
-  getCategories: () =>
+  getCategoryById: (categoryId) =>
     axios
-      .get("api/categories")
+      .get(`/api/category/${categoryId}`)
       .then((response) => response.data)
       .catch((error) => console.log(error)),
   getSubcategoriesByCategory: (categoryId) =>
@@ -21,6 +21,7 @@ const api = {
   getProductsByCategory: (categoryId) =>
     axios
       .get(`/api/products/${categoryId}`)
+      .then((response) => response.data)
       .catch((error) => console.log(error)),
   getProductsBySubcategory: (subcategoryId) =>
     axios
