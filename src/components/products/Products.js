@@ -4,16 +4,22 @@ import api from "../../services/ApiService";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState({});
   const { categoryId } = useParams();
 
   useEffect(() => {
     getProductsByCategory();
-  }, []);
+    getCategory();
+  });
 
   const getProductsByCategory = async () => {
     const response = await api.getProductsByCategory(categoryId);
-    console.log(response.data.data.products);
+    console.log(response.data.products);
   };
 
-  return <div>{categoryId}</div>;
+  const getCategory = async () => {
+    const response = await api.getCategoryById(categoryId);
+    setCategory(response.data.category);
+  };
+  return <div>{category.name}</div>;
 }
