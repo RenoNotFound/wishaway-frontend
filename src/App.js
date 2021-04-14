@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/auth/Login";
 import SignUp from "./components/auth/SignUp";
 import LoginGoogle from "./components/auth/LoginGoogle";
@@ -14,8 +14,6 @@ function App() {
     <Router>
       <div className="App">
         <Layout>
-          {/* <Link to="/login">Login</Link>
-          <Link to="/sign-up">Sign up</Link> */}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route
