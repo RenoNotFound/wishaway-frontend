@@ -1,0 +1,89 @@
+// CeraStencilPro basic
+@font-face {
+  font-family: "CeraStencilPro";
+  src: url("../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO.otf")
+      format("opentype"),
+    url("../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO.woff")
+      format("woff");
+}
+
+// CeraStencilPro bold
+@font-face {
+  font-family: "CeraStencilProBold";
+  src: url("../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO\ Bold.otf")
+      format("opentype"),
+    url("../../assets/fonts/Cera_Stencil_PRO/Cera\ Stencil\ PRO\ Bold.woff")
+      format("woff");
+}
+
+// ArcherMediumPro
+@font-face {
+  font-family: "ArcherMedium";
+  src: url("../../assets/fonts/Archer-Font/Archer-Medium-Pro.otf")
+    format("opentype");
+}
+
+.decoration-mini-circles {
+  background-image: url("../../assets/transparent-circles.svg");
+  position: absolute;
+  width: 100%;
+  height: 22.05vh;
+  z-index: -1;
+}
+
+.category-heading {
+  margin-top: 3%;
+
+  .category-description-container {
+    background: rgb(234, 140, 204);
+    background: linear-gradient(
+      90deg,
+      rgba(234, 140, 204, 1) 0%,
+      rgba(141, 208, 227, 1) 100%
+    );
+
+    width: 40%;
+    max-height: 150px;
+    padding: 90px 362px 90px 55px;
+    left: 10%;
+
+    position: relative;
+    text-align: left;
+
+    color: white;
+
+    p {
+      margin: 0;
+      padding: 0;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .category-title {
+      font-family: "CeraStencilPro", Helvetica, Arial, sans-serif;
+      font-size: 50px;
+
+      margin-bottom: 12px;
+    }
+
+    .category-description {
+      font-family: "ArcherMedium";
+      font-weight: 570;
+      font-size: 17px;
+      line-height: 19px;
+      letter-spacing: 0.4px;
+
+      margin-bottom: 24px;
+    }
+  }
+  .health-pic {
+    width: 300px;
+    position: relative;
+
+    left: 490px;
+    z-index: 2;
+    bottom: 315px;
+  }
+}
