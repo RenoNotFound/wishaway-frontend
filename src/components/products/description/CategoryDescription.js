@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import api from "../../../services/ApiService";
-import health from "../../../assets/health.png";
 
 export default function CategoryDescription({ categoryId }) {
   const [category, setCategory] = useState({});
@@ -17,11 +16,11 @@ export default function CategoryDescription({ categoryId }) {
 
   return (
     <div className="category-heading">
-      <div className="category-description-container">
+      <div className={`category-description-container ${category.name}`}>
         <p className="category-title">{category.name}</p>
         <p className="category-description">{category.description}</p>
       </div>
-      <img className="health-pic" src={health} alt="health" />
+      <img className="health-pic" src={category.pic_url} alt="health" />
     </div>
   );
 }
