@@ -20,7 +20,7 @@ export default function CategoryDescription({ categoryId }) {
         <p className="category-title">{category.name}</p>
         <p className="category-description">{category.description}</p>
       </div>
-      <img className="health-pic" src={category.pic_url} alt="health" />
+      <img className="heading-pic" src={category.pic_url} alt="health" />
     </div>
   );
 }
