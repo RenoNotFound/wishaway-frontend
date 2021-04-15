@@ -21,12 +21,10 @@ export default function Products() {
   return (
     <Fragment>
       <div className="decoration-mini-circles" />
-      <div>
-        <div className="description-container">
-          <CategoryDescription categoryId={categoryId} />
-        </div>
-        <div></div>
+      <div className="description-container">
+        <CategoryDescription categoryId={categoryId} />
       </div>
+      <div></div>
     </Fragment>
   );
 }
