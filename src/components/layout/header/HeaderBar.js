@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
-import WishAwayLogo from "../../../assets/logo-wishaway.svg";
+import WishAwayLogo from "../../../assets/images/logo-wishaway.svg";
 
 export default function HeaderBar() {
   return (
