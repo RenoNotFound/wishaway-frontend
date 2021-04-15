@@ -15,8 +15,8 @@ export default function CategoryDescription({ categoryId }) {
   };
 
   return (
-    <div className="category-heading">
-      <div className={`category-description-container ${category.name}`}>
+    <div className="category-heading-wrapper">
+      <div className={`category-heading ${category.name}`}>
         <p className="category-title">{category.name}</p>
         <p className="category-description">{category.description}</p>
       </div>
