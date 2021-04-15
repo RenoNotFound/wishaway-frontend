@@ -32,9 +32,11 @@
 }
 
 // Description heading styles
-.category-heading {
+.category-heading-wrapper {
   padding-top: 3%;
   height: 385px;
+
+  display: flex;
 
   .electronics {
     background: rgb(140, 208, 227);
@@ -81,7 +83,7 @@
     );
   }
 
-  .category-description-container {
+  .category-heading {
     width: 40%;
     max-height: 150px;
     padding: 90px 362px 90px 55px;
@@ -121,10 +123,11 @@
 
   .heading-pic {
     width: 300px;
+    height: 300px;
     position: relative;
+    margin-left: 70px;
+    margin-top: 15px;
 
-    left: 490px;
     z-index: 2;
-    bottom: 315px;
   }
 }
