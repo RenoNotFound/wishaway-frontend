@@ -32,16 +32,55 @@
 }
 
 .category-heading {
-  margin-top: 3%;
+  padding-top: 3%;
+  height: 385px;
 
-  .category-description-container {
+  .electronics {
+    background: rgb(140, 208, 227);
+    background: linear-gradient(
+      90deg,
+      rgba(140, 208, 227, 1) 0%,
+      rgba(253, 224, 94, 1) 100%
+    );
+  }
+
+  .fashion {
+    background: rgb(140, 208, 227);
+    background: linear-gradient(
+      90deg,
+      rgba(140, 208, 227, 1) 0%,
+      rgba(220, 146, 183, 1) 100%
+    );
+  }
+
+  .health {
     background: rgb(234, 140, 204);
     background: linear-gradient(
       90deg,
       rgba(234, 140, 204, 1) 0%,
-      rgba(141, 208, 227, 1) 100%
+      rgba(140, 208, 227, 1) 100%
     );
+  }
 
+  .health {
+    background: rgb(140, 208, 227);
+    background: linear-gradient(
+      90deg,
+      rgba(140, 208, 227, 1) 0%,
+      rgba(157, 212, 149, 1) 100%
+    );
+  }
+
+  .books {
+    background: rgb(140, 208, 227);
+    background: linear-gradient(
+      86deg,
+      rgba(140, 208, 227, 1) 0%,
+      rgba(255, 158, 231, 1) 100%
+    );
+  }
+
+  .category-description-container {
     width: 40%;
     max-height: 150px;
     padding: 90px 362px 90px 55px;
