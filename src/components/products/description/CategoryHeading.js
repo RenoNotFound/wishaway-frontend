@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import api from "../../../services/ApiService";
 
-export default function CategoryDescription({ categoryId }) {
+export default function CategoryHeading({ categoryId }) {
   const [category, setCategory] = useState({});
 
   useEffect(() => {
@@ -15,12 +15,12 @@ export default function CategoryDescription({ categoryId }) {
   };
 
   return (
-    <div className="category-heading-wrapper">
+    <Fragment>
       <div className={`category-heading ${category.name}`}>
         <p className="category-title">{category.name}</p>
         <p className="category-description">{category.description}</p>
       </div>
       <img className="heading-pic" src={category.pic_url} alt="health" />
-    </div>
+    </Fragment>
   );
 }
