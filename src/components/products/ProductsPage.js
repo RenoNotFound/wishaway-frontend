@@ -1,7 +1,8 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../services/ApiService";
-import CategoryDescription from "./description/CategoryDescription";
+import CategoryHeading from "./description/CategoryHeading";
+import ProductsContainer from "./productsDisplay/ProductsContainer";
 
 import "./products.scss";
 
@@ -21,10 +22,12 @@ export default function Products() {
   return (
     <Fragment>
       <div className="decoration-mini-circles" />
-      <div className="description-container">
-        <CategoryDescription categoryId={categoryId} />
+      <div className="heading-container">
+        <CategoryHeading categoryId={categoryId} />
       </div>
-      <div></div>
+      <div className="products-container">
+        <ProductsContainer categoryId={categoryId} />
+      </div>
     </Fragment>
   );
 }

@@ -6,7 +6,7 @@ import SignUp from "./components/auth/SignUp";
 import LoginGoogle from "./components/auth/LoginGoogle";
 import LoginFacebook from "./components/auth/LoginFacebook";
 import Layout from "./components/layout/Layout";
-import Products from "./components/products/Products";
+import ProductsPage from "./components/products/ProductsPage";
 import Home from "./components/home/Home";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route
               path="/products/:categoryId/:category"
-              component={Products}
+              component={ProductsPage}
             />
             <Route exact path="/login" component={Login} />
             <Route exact path="/sign-up" component={SignUp} />
