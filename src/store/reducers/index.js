@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
   auth: authReducer,
-  categories: categoryReducer,
+  navBarItems: categoryReducer,
 });
 
 export default allReducers;
