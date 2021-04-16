@@ -26,7 +26,8 @@ const api = {
       .catch((error) => console.log(error)),
   getProductsBySubcategory: (subcategoryId) =>
     axios
-      .get(`/api/products/${subcategoryId}`)
+      .get(`/api/products-sub/${subcategoryId}`)
+      .then((response) => response.data)
       .catch((error) => console.log(error)),
 };
 
