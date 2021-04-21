@@ -5,10 +5,10 @@ export default function ProductsHeading({ categoryId }) {
   const [category, setCategory] = useState({});
 
   useEffect(() => {
-    getCategory();
+    getCategory(categoryId);
   }, [categoryId]);
 
-  const getCategory = async () => {
+  const getCategory = async (categoryId) => {
     const response = await api.getCategoryById(categoryId);
     setCategory(response.data.category);
   };
