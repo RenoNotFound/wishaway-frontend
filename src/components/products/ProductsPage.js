@@ -1,21 +1,21 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { Fragment } from "react";
 import { useParams } from "react-router-dom";
-import CategoryHeading from "./heading/ProductsHeading";
+import ProductsHeading from "./heading/ProductsHeading";
 import ProductsDisplay from "./display/ProductsDisplay";
 
 import "./products.scss";
 
 export default function Products() {
-  const { categoryId } = useParams();
+  const { categoryId, category } = useParams();
 
   return (
     <Fragment>
       <div className="decoration-mini-circles" />
       <div className="heading-container">
-        <CategoryHeading categoryId={categoryId} />
+        <ProductsHeading categoryId={categoryId} />
       </div>
       <div className="products-container">
-        <ProductsDisplay categoryId={categoryId} />
+        <ProductsDisplay categoryId={categoryId} category={category} />
       </div>
     </Fragment>
   );
