@@ -14,9 +14,7 @@ export default function Products() {
       <div className="heading-container">
         <ProductsHeading categoryId={categoryId} />
       </div>
-      <div className="products-container">
-        <ProductsDisplay categoryId={categoryId} category={category} />
-      </div>
+      <ProductsDisplay categoryId={categoryId} category={category} />
     </Fragment>
   );
 }
