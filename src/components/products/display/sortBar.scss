@@ -1,0 +1,79 @@
+.sort-view {
+  margin: 2% 3% 0 3%;
+  height: 130px;
+  display: flex;
+  justify-content: flex-end;
+
+  .sort-wrapper {
+    width: 16%;
+
+    hr {
+      display: block;
+      height: 0.5px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 0 0;
+      padding: 0;
+    }
+
+    .sort-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+
+      text-transform: uppercase;
+      font-family: "CeraStencilProBold";
+      font-size: 15px;
+
+      p {
+        margin: 7px 0;
+        padding: 0;
+      }
+    }
+
+    .sort-dropdown {
+      background-color: #f6ecf3;
+      font-family: "CeraStencilPro";
+      font-size: 14px;
+      text-align: left;
+
+      padding: 10%;
+
+      transition: visibility 0.3s linear, opacity 0.3s linear;
+
+      visibility: visible;
+      opacity: 1;
+
+      z-index: 10;
+
+      .active {
+        background-color: #f5ea77;
+      }
+
+      li {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 1);
+
+        -webkit-transition: color 0.15s ease;
+        -moz-transition: color 0.15s ease;
+        -o-transition: color 0.15s ease;
+        transition: color 0.15s ease;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.6);
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .hidden-dropdown {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.3s linear, opacity 0.3s linear;
+    }
+  }
+}
