@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/logo-wishaway.svg" width="500">
+  <img src="./public/wishaway-logo.svg" width="500">
 </p>
 
 The site is still under development!
@@ -8,6 +8,7 @@ WishAway is an e-commerce site with a little twist. You can shop as usual in a w
 
 ### Preview of the product page
 
-<img src="./public/wishaway-prod-headig.png" width="500">
-
-<img src="./public/wishaway-products.png" width="500">
+<p align="center">
+  <img src="./public/wishaway-prod-heading.png" width="500">
+  <img src="./public/wishaway-products.png" width="500">
+</p>
