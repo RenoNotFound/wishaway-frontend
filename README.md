@@ -10,5 +10,8 @@ WishAway is an e-commerce site with a little twist. You can shop as usual in a w
 
 <p align="center">
   <img src="./public/wishaway-prod-heading.png" width="500">
+</p>
+
+<p align="center">
   <img src="./public/wishaway-products.png" width="500">
 </p>
