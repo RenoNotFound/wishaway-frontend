@@ -1,0 +1,134 @@
+.products-container {
+  display: flex;
+  margin: 0 3%;
+  gap: 6%;
+
+  .subcategory-wrapper {
+    flex: 1;
+
+    .subcategory-nav {
+      font-family: "CeraStencilPro", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      text-align: left;
+      text-transform: uppercase;
+      position: sticky;
+      top: 180px;
+
+      flex: 1;
+
+      .nav-list {
+        hr {
+          display: block;
+          height: 0.5px;
+          border: 0;
+          border-top: 1px solid #ccc;
+          margin: 7px 0;
+          padding: 0;
+        }
+
+        li {
+          cursor: pointer;
+          margin: 0 7px;
+          padding: 5px 8px;
+          color: rgba(0, 0, 0, 1);
+
+          -webkit-transition: color 0.15s ease;
+          -moz-transition: color 0.15s ease;
+          -o-transition: color 0.15s ease;
+          transition: color 0.15s ease;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+
+        .active {
+          background-color: #f5ea77;
+        }
+      }
+    }
+  }
+
+  .product-list-container {
+    display: flex;
+    flex-flow: wrap;
+    flex: 5;
+    gap: 5%;
+
+    .product-card {
+      width: 20%;
+      margin: 2% 0.5%;
+      font-weight: bolder;
+      color: rgba(0, 0, 0, 0.7);
+
+      .product-title {
+        font-family: "CeraStencilPro";
+        text-align: center;
+        margin: auto;
+        height: 60px;
+        padding: 10px 0 0 0;
+      }
+
+      .health-btn {
+        background: rgb(140, 208, 227);
+        background: linear-gradient(
+          90deg,
+          rgba(140, 208, 227, 1) 0%,
+          rgba(157, 212, 149, 1) 100%
+        );
+      }
+
+      .electronics-btn {
+        background: rgb(140, 208, 227);
+        background: linear-gradient(
+          90deg,
+          rgba(140, 208, 227, 1) 0%,
+          rgba(253, 224, 94, 1) 100%
+        );
+      }
+
+      .fashion-btn {
+        background: rgb(140, 208, 227);
+        background: linear-gradient(
+          90deg,
+          rgba(140, 208, 227, 1) 0%,
+          rgba(220, 146, 183, 1) 100%
+        );
+      }
+
+      .books-btn {
+        background: rgb(140, 208, 227);
+        background: linear-gradient(
+          90deg,
+          rgba(140, 208, 227, 1) 0%,
+          rgba(255, 158, 231, 1) 100%
+        );
+      }
+
+      .add-to-cart-button {
+        border-radius: 0;
+        border: none;
+        width: 180px;
+        height: 40px;
+
+        cursor: pointer;
+
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+
+        -webkit-box-shadow: 3px 3px 0px 0px #f5ea77;
+        box-shadow: 3px 3px 0px 0px #f5ea77;
+
+        background-size: 600%;
+        transition: 0.3s;
+
+        &:hover {
+          background-size: 100%;
+          background-position: left;
+        }
+      }
+    }
+  }
+}

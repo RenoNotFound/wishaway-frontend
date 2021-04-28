@@ -7,6 +7,14 @@ const initialStates = {
     user: {},
     token: null,
   },
+  navBarItems: {
+    categories: [
+      { id: 1, name: "health" },
+      { id: 2, name: "electronics" },
+      { id: 3, name: "books" },
+      { id: 4, name: "fashion" },
+    ],
+  },
 };
 
 let store = createStore(
